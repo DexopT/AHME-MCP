@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+        "ahme": {
+            "command": "python",
+            "args": [
+                "-m",
+                "ahme.mcp_server"
+            ],
+            "env": {
+                "PYTHONPATH": "."
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+[chunking]
+chunk_size_tokens = 1500
+overlap_tokens = 150
+
+[queue]
+db_path = "ahme_queue.db"
+max_retries = 3
+
+[monitor]
+poll_interval_seconds = 2.0
+cpu_idle_threshold_percent = 30.0
+
+[ollama]
+base_url = "http://localhost:11434"
+# Change this to any model you have pulled locally, e.g. "qwen2:1.5b", "gemma3:1b", "phi3:mini"
+model = "qwen2:1.5b"
+timeout_seconds = 300
+
+[merger]
+batch_size = 3
+
+[logging]
+log_file = "ahme.log"
+memory_file = ".ahme_memory.md"
+max_bytes = 5242880
+backup_count = 3

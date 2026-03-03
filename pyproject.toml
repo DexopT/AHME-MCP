@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahme"
+version = "0.1.0"
+description = "Asynchronous Hierarchical Memory Engine — a local sidecar daemon that compresses AI conversation context into a dense Master Memory Block via Ollama, SQLite, and asyncio."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["ai", "memory", "mcp", "ollama", "llm", "context"]
+dependencies = [
+    "httpx>=0.27.0",
+    "tiktoken>=0.7.0",
+    "psutil>=6.0.0",
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+ahme = "ahme.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ahme*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
