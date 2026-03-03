@@ -269,11 +269,6 @@ Expected output: **19 passed** — all tests use mocks and never require a live 
 
 Contributions welcome! Please open an issue before submitting large PRs.
 
-```bash
-git clone https://github.com/your-username/ahme
-pip install -e ".[dev]"
-python -m pytest tests/ -v   # make sure tests pass before opening a PR
-```
 
 ---
 
