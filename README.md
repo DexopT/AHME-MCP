@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 AHME
+#  AHME
 ### Asynchronous Hierarchical Memory Engine
 
 ![AHME Banner](ahme.png)
